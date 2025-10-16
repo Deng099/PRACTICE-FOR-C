@@ -7,64 +7,38 @@
 #include <math.h>
 int main()
 {
-    int a , b , digits = 1 , i , beifen , value ;
-    
-    scanf ("%d" , &a );
-    beifen = a ;
-    while (a / 10 != 0)
+    int digit = 1 ;
+    int num ;
+    scanf ("%d" , &num) ;
+    int temp = num ;
+    for ( digit = 1 ; temp >= 10 ; digit ++)
     {
-        a = a / 10 ;
-        digits ++ ;
+        temp = temp / 10 ; 
     }
-    
-    for ( i = digits - 1 ; i >= 0 ; i --)    
-    { 
-        b = pow ( 10 , i ) ;
-        value = beifen / b ;
-        printf ("%d\n", value ) ;
-        beifen = beifen % b ;
-        
-    }    
-    
-    
+    int shu ;
+    for ( ; digit > 0 ; digit -- )
+    {
+        shu = num / pow ( 10 , digit - 1 ); 
+        printf ( "%d\n" , shu ) ;
+        num = num - shu * pow ( 10 , digit - 1 ) ;
+    }
 }
 
 //倒着切割
+//注意：易漏掉第一位！为此必须在循环外再加一次
 #include <stdio.h>
 int main()
 {
-    int a , b , digits ;
-    scanf ("%d" , &a );
-    for ( digits = 1 ; a / 10 != 0 ; digits ++)
-    
+    int i , shu ;
+    scanf ("%d" , &i ) ;
+    for ( ; i > 9 ;)
     {
-        b = a % 10 ;
-        printf ("%d ", b );
-        a = a / 10 ;
+        shu = i % 10 ;
+        i = i / 10 ;
+        printf ("%d\n" , shu ) ;
     }
-    printf ("%d\n" , a );
-    printf ("%d" , digits );
-    return 0 ;
-
+    printf ("%d" , i ) ;
 }
 
 //反转
-//注意：易漏掉第一位！为此必须在循环外再加一次
-//更好的做法：选用do while 循环，完成每次循环后再判断
-#include <stdio.h>
-int main()
-{
-    int i , j , k , value = 0;
-    scanf ("%d" , &i );
-    while ( i / 10 != 0)
-    {
-        j = i % 10;
-        k = i / 10;
-        
-        i = k ;
-        value = value * 10 + j ;
-    }
-    value = value * 10 + i ;  
-    printf ("%d", value) ;
-    return 0 ;
-}
+//在“倒着切割”输出的时候不分行即可
