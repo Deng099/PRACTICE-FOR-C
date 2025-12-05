@@ -15,7 +15,6 @@ int main()
     char temp[100] ;
     for ( j = i - 1 ; j > 0; j --)
     {
-    
         for ( k = 0 ; k < j ; k ++ )
         {
             if ( strcmp ( str[k] , str[k + 1] ) > 0 )

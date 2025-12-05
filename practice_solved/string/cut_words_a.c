@@ -16,6 +16,7 @@ int main()
         {
             break ;
         }
+        
         //输入：空格切割单词，以回车作为结束输入
         int next = getchar() ;
         if ( next == '\n' )

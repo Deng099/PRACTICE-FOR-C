@@ -9,5 +9,4 @@ int main()
         c = getchar();
     }
     return 0;
-
 }

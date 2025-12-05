@@ -19,3 +19,11 @@ int main()
     printf ("%d" , num ) ;
 
 }
+
+//或者直接用函数
+#include <stdio.h>
+#include <stdlib.h>  
+int main() {
+    char str[] = "12345";
+    int num = atoi(str);
+}

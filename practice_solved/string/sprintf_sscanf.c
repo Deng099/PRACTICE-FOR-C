@@ -2,7 +2,6 @@
 #include <stdio.h>
 int main()
 {
-    //字符串例如“345”转换成可用于计算的整数
     char combine[100] ;
     float height = 1.6 ;
     char name[10] = "Cindy" ;

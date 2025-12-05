@@ -7,7 +7,6 @@ int main()
     c = a , d = b ;
     while (c != d)
     {
-        
         if (c < d) 
             c+=a ;
         else 

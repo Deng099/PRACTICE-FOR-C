@@ -32,11 +32,12 @@ int main()
                 }
                 
             }
+
             if ( done2 == 0 )
-                {
-                    printf ("%d=%d+%d" , num , a , b );
-                    break ;
-                }
+            {
+                printf ("%d=%d+%d" , num , a , b );
+                break ;
+            }
         }
     }   
 }

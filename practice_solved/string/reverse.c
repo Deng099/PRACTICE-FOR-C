@@ -19,6 +19,4 @@ int main()
 
         printf ("%s" , str ) ;
     } 
-    
-    
 }
